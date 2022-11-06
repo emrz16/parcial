@@ -1,6 +1,25 @@
 .image-style{
-    width: 80%;
-    margin-left: auto; 
-    margin-right: auto;
-    margin-bottom: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0%;
+    padding-right: 0%;
+    border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+    margin-bottom: 20px;
+}
+@font-face {
+    font-family: 'IndieFlower-Regular';
+    src: local('IndieFlower-Regular'), url('/assets/fonts/IndieFlower-Regular.ttf') format('truetype');
+}
+
+.title{
+    margin-top: 10px;
+    font-family: "IndieFlower-Regular", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.footer{
+    margin-top: 5%;
+    text-align: center;
 }

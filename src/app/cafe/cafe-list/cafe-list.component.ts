@@ -25,16 +25,18 @@ export class CafeListComponent implements OnInit {
 
   getTiposCafe(){
     for(var c of this.cafes){
-      let actual = this.cantidadActualTiposCafe(this.tiposCafe, c.tipo.toLocaleLowerCase());
+      let tipoCustom = c.tipo.toLocaleLowerCase().split(" ")[c.tipo.split(" ").length -1];
+      let actual = this.cantidadActualTiposCafe(this.tiposCafe, tipoCustom);
       if(actual == 0){
-        this.tiposCafe.push(new CafeTipo(c.tipo.toLocaleLowerCase(), 1));
+        this.tiposCafe.push(new CafeTipo(tipoCustom, 1));
       }
     }
   }
 
   cantidadActualTiposCafe(cafeTipo:CafeTipo[], tipo:string){
       for(var c of cafeTipo){
-        if(c.tipo.toLocaleLowerCase() == tipo){
+        let tipoCustom = c.tipo.toLocaleLowerCase().split(" ")[c.tipo.split(" ").length -1];
+        if(tipoCustom == tipo){
           c.cantidad = c.cantidad +1;
           return c.cantidad;
         }
