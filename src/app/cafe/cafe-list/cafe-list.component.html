@@ -1,0 +1,24 @@
+<p>El aroma mágico</p>
+<img src="/assets/cafe-image.png" alt="image" class="image-style">
+<table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of cafes;let i = index" [attr.data-index]="i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{c.nombre}}</td>
+        <td>{{c.tipo}}</td>
+        <td>{{c.region}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngFor="let c of tiposCafe">Total caf&eacute; de {{c.tipo}} : {{c.cantidad}}</p>
+  
+ 
